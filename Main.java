@@ -17,5 +17,19 @@ public class Main {
         client1.send("Hello", server);
         client2.send("Ndeip", server);
         client3.send("Unjani", server);
+
+        //        RLE algorithm
+
+        String originalMessage = "Message1";
+        StringBuilder compressedText;
+        compressedText = CompressionTwo.rleCompression(originalMessage);
+        client4.send(compressedText.toString(), server);
+
+
+//        LZW algorithm
+
+        String originalMessage2 = "Message2";
+        List<Integer> compressed = Compression.encode(originalMessage2);
+        client4.send(compressed.toString(), server);
     }
 }
