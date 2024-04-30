@@ -15,6 +15,12 @@ public class Compression {
 //        This loop runs 256 times, it is a fixed amount that will not change regardless of the text input.
 
 
+
+//        TIME COMPLEXITY
+//        -------------
+//        0(256) therefore when simplified it becomes 0(1)
+
+
         for(int i =0; i < dictionarySize; i++){
 
 //            String.valueOf((char) i ) converts the integer into it's character representation
@@ -33,6 +39,14 @@ public class Compression {
 //      hence why the empty string foundChars is used.
 
 
+//        TIME COMPLEXITY
+//        -----------------
+//        The loop runs 0(n) times, where n is dependant on the size of the string given in the parameter.
+//        As the size of the given, uncompressed text grows, the amount of itterations in this loop grows as the same rate. Linearly.
+//
+//        At the point where characters and their respective integers are added to the hashmap,
+//        this act takes 0(1) constant time therefore will not contribute to the overall time complexity of the algorithm.
+//        Therefore the
 
         for(char character : text.toCharArray()){
             String charsToAdd = foundChars + character;
